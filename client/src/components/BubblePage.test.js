@@ -6,14 +6,14 @@ test("Fetches data and renders the bubbles", () => {
   // Finish this test
   const { queryAllByTestId, getAllByTestId, rerender } = render (<BubblePage color={[]}/>)
 
-  const initialColors = queryAllByTestId(/color/i);
+  const initialColors = queryAllByTestId(/colors/i);
   expect(initialColors).toHaveLength(0);
   expect(initialColors).toEqual([]);
 
   rerender (<BubblePage color= {data} />);
-  const colors = getAllByTestId(/color/i);
+  const color= getAllByTestId(/color/i);
 
-  expect(colors).toHaveLength(2);
+  expect(color).toHaveLength(2);
 });
 
 let data = [

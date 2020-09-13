@@ -12,8 +12,7 @@ const ColorList = ({ colors, updateColors }) => {
   console.log(colors);
   const [editing, setEditing] = useState(false);
   const [colorToEdit, setColorToEdit] = useState(initialColor);
-  const { id } = useParams();
-  const { push } = useHistory();
+  const push  = useHistory();
 
   const editColor = color => {
     setEditing(true);
@@ -45,7 +44,7 @@ const ColorList = ({ colors, updateColors }) => {
   };
 
   return (
-    <div className="colors-wrap">
+    <div className="colors-wrap" data-testid= 'color'>
       <p>colors</p>
       <ul>
         {colors.map(color => (
